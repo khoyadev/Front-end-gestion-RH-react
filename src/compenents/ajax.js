@@ -1,15 +1,25 @@
 import axios from "axios";
 
-// const BASE_URL = 'http://127.0.0.1:8000/api/';
+const BASE_URL = "http://127.0.0.1:8000/api";
 export default {
-    BASE_URL : 'http://127.0.0.1:8000/api/',
-   async getAllDepartments () {
-      return 
-      await axios
-      .get("http://127.0.0.1:8000/api/employees")
-      .then((res) => res.data)
-      .catch(error => {
-         console.log(error);
+  async getAllDepartments() {
+    return await fetch(`${BASE_URL}/departements`)
+      .then((res) => res.json())
+      .then((data) => {
+        return data;
       })
-    }
-}
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+  async getAllDepartmentsBis() {
+    return await axios.get(`${BASE_URL}/departements`)
+      .then((response) => {
+         console.log(response);
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};

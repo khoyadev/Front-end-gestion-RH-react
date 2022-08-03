@@ -16,18 +16,20 @@ body{
 .main{
   display: flex;
   height: 100vh;
+  background-color:  #fafafa;
 }
 
 .sidebar{
+  
  width: 100px;
  flex-shrink: 0;
  background-color: #25612F;
- height: 100%;
- overflow: auto;
+ height: 100vh;
+ position: fixed !important;
 }
 .menu-item {
 
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 2rem;
@@ -58,11 +60,16 @@ body{
 .sidebar-item.open > .sidebar-content{
   height: auto;
 }
-/* 
-.sidebar-item .row{
-  list-style-type: none;
-  margin-bottom: 2.7rem;
-} */
+.card{
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+
+}
+.container{
+  margin-left: 130px;
+}
 
 
 

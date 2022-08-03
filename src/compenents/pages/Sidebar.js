@@ -24,7 +24,7 @@ const Sidebar = () => {
   return (
     <List className="sidebar"
       sx={{ width: '100%', maxWidth: 100}}
-      component="nav"
+    
       aria-labelledby="nested-list-subheader"
     >
       <ListItemButton>

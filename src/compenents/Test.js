@@ -1,20 +1,23 @@
-import React, { Component } from 'react'
-import ajax from './ajax';
+import React, { useEffect, useState } from "react";
+import ajax from "./ajax";
 
-export default class Test extends Component {
-  state = {
-    departements: []
-  };
-   async componentDidMount() {
-    const departements = await ajax.getAllDepartments();
-    this.setState({ departements });
-   }
-  render() {
-    let  departements = this.state.departements;
-    return (
-  
-        <h1>Test</h1>
-        
-    );
-  }
-}
+const Test= () => {
+  const [departements, setDepartements] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const departements = await ajax.getAllDepartmentsBis();
+      setDepartements(departements);
+    })();
+  },[]);
+
+  return (
+    <div>
+      <h1>Test</h1>
+      {departements.length > 0 && departements.map((departement) => 
+        <p key={departement.id}>{departement.nom_departement}</p>
+      )}
+    </div>
+  );
+};
+export default Test;

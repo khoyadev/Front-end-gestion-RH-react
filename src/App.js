@@ -7,6 +7,8 @@ import Edit from "./compenents/Employees/modification/Edit";
 import Delete from "./compenents/Employees/suppression/Delete";
 import Home from "./compenents/pages/Home";
 import Test from "./compenents/Test";
+import TestFom from "./compenents/TestFom";
+
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         {/* <Route path="/" element={<Navbar />}> */}
         <Route index element={<Home />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/testform" element={<TestFom />}/>
+        {/* <Route path="/testform" element={<TestForm />} /> */}
         <Route path="/liste" element={<Liste />} />
         <Route path="/ajout" element={<Ajout />} />  
         <Route path="/delete" element={<Delete />} />  

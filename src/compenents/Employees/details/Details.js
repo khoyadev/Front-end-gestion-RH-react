@@ -8,7 +8,7 @@ const Details = () => {
         <Sidebar />
       <div className="container">
         <div>
-        <h1>Details des employees</h1>
+        <h3>Details des employees</h3>
         <TypesDetails />
         </div>
       </div>

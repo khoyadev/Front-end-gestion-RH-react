@@ -36,8 +36,8 @@ export default function DataTableEmployees() {
     setData(newstudent);
   };
   return (
-    <TableContainer component={Paper} sx={{ margin: 10 }}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} sx={{ margin: 5 }}>
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Nom</TableCell>
@@ -51,7 +51,7 @@ export default function DataTableEmployees() {
           {data.map((employee) => (
             <TableRow
               key={employee.id}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+             
             >
               <TableCell component="th" scope="row">
                 {employee.nom}
