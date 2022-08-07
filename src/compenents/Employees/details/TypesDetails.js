@@ -24,8 +24,6 @@ const TypesDetails = () => {
   const [departement, setDepartement] = useState({});
   const [fonction, setFonction] = useState({});
   const [contrat, setContrat] = useState([]);
-  const [typecontrat, setTypecontrat] = useState({});
-  const [idContrat, setIdContrat] = useState("");
 
   // le useEffect se joue lorsque le composant est monte
   useEffect(() => {
@@ -57,17 +55,7 @@ const TypesDetails = () => {
   contrat.forEach((contrats)=>{
        console.log(contrats.type_contrat.nom_typecontrat);
   })
-  // requete pour recuperer le type de contrat
-  // useEffect(() => {
-  //   contrat.forEach((contrats)=>{
-  //     console.log(contrats.id);
-  //     console.log(contrats.type_contrat_id);
-  //   axios.get(
-  //     `${base_url}typeContrats/${contrats.type_contrat_id}`
-  //   ).then((res) => setTypecontrat(res.data));
-
-  // })
-  // }, [contrat]);
+ 
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <TabContext value={value}>

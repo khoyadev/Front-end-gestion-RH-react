@@ -9,8 +9,10 @@ const Ajout = () => {
     <div className="main">
         <Sidebar />
       <div className="container">
-        {/* <FormEmploye /> */}
-        <FormEmploye />
+        <div className="form">
+        <FormEmploye  />
+        </div>
+        
      
       </div>
     </div>
