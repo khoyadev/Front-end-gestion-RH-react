@@ -90,5 +90,9 @@ body{
 .text-danger{
   color: red;
 }
-
+.inputtaille{
+  height: 35px;
+  border-radius: 8px;
+  border:#928f8f80 1px solid;
+}
 

@@ -135,19 +135,7 @@ const FormEmploye = () => {
           Nom
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-        
-         onChange={(e) => handle(e)}
-         name="nom"
-         id="nom"
-        //  label="nom"
-        //  autoComplete="nom"
-        //  autoFocus
-        //  {...register('nom', registerOptions.nom) }
-        //  error={!!errors?.nom}
-        //  helpertext={errors?.nom ? errors.nom.message : null}
-        />  
-         <small className="text-danger">
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="nom" id="nom"  />     <small className="text-danger">
             {errors?.nom && errors.nom.message}
           </small>
       </FormControl>
@@ -157,20 +145,7 @@ const FormEmploye = () => {
           Prénom
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-        
-         onChange={(e) => handle(e)}
-         name="prenom"
-         id="prenom"
-        //  label="prenom"
-        //  autoComplete="prenom"
-        //  autoFocus
-        //  {...register('prenom', registerOptions.prenom) }
-        
-        //  error={!!errors?.prenom}
-        //  helpertext={errors?.prenom ? errors.prenom.message : null}
-        />  
-         <small className="text-danger">
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="prenom" id="prenom" />         <small className="text-danger">
             {errors?.prenom && errors.prenom.message}
           </small>
       </FormControl>
@@ -182,18 +157,7 @@ const FormEmploye = () => {
           Date de naissance
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="date_naissance"
-         type="date"
-         id="date_naissance"
-        //  label="date naissance"
-        //  autoComplete="date_naissance"
-         
-        //  autoFocus
-        //  {...register('date_naissance', registerOptions.date_naissance) }
-        //  error={!!errors?.date_naissance}
-        //  helpertext={errors?.date_naissance ? errors.date_naissance.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="date" name="date_naissance" id="date_naissance" 
         />  
          <small className="text-danger">
             {errors?.date_naissance && errors.date_naissance.message}
@@ -205,17 +169,7 @@ const FormEmploye = () => {
           Adresse
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="adresse"
-         id="adresse"
-        
-         autoComplete="adresse"
-         autoFocus
-        //  {...register('adresse', registerOptions.adresse) }
-        //  error={!!errors?.adresse}
-        //  helpertext={errors?.adresse ? errors.adresse.message : null}
-        />  
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="adresse" id="adresse" />
          <small className="text-danger">
             {errors?.adresse && errors.adresse.message}
           </small>
@@ -226,18 +180,7 @@ const FormEmploye = () => {
           Téléphone
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-        
-         onChange={(e) => handle(e)}
-         name="telephone"
-         id="telephone"
-        //  label="telephone"
-        //  autoComplete="telephone"
-        //  autoFocus
-        //  {...register('telephone', registerOptions.telephone) }
-        
-        //  error={!!errors?.telephone}
-        //  helpertext={errors?.telephone ? errors.telephone.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="telephone" id="telephone" 
         />  
          <small className="text-danger">
             {errors?.telephone && errors.telephone.message}
@@ -251,16 +194,7 @@ const FormEmploye = () => {
           Email
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="email"
-         id="email"
-        //  label="email"
-        //  autoComplete="email"
-        //  autoFocus
-        //  {...register('email', registerOptions.email) }
-        //  error={!!errors?.email}
-        //  helpertext={errors?.email ? errors.email.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="email" name="email" id="email" 
         />  
          <small className="text-danger">
             {errors?.email && errors.email.message}
@@ -272,17 +206,8 @@ const FormEmploye = () => {
           CIN
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="CIN"
-         id="CIN"
-        //  label="CIN"
-        //  autoComplete="CIN"
-        //  autoFocus
-        //  {...register('CIN', registerOptions.CIN) }
-        //  error={!!errors?.CIN}
-        //  helpertext={errors?.CIN ? errors.CIN.message : null}
-        />  
+        <input className="inputtaille"  onChange={(e) => handle(e)} type="text" name="CIN" id="CIN" />
+          
          <small className="text-danger">
             {errors?.CIN && errors.CIN.message}
           </small>
@@ -293,16 +218,7 @@ const FormEmploye = () => {
           CNSS
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="CNSS"
-         id="CNSS"
-        //  label="CNSS"
-        //  autoComplete="CNSS"
-        //  autoFocus
-        //  {...register('CNSS', registerOptions.CNSS) }
-        //  error={!!errors?.CNSS}
-        //  helpertext={errors?.CNSS ? errors.CNSS.message : null}
+        <input className="inputtaille"  onChange={(e) => handle(e)} type="text" name="CNSS" id="CNSS"
         />  
          <small className="text-danger">
             {errors?.CNSS && errors.CNSS.message}
@@ -314,14 +230,14 @@ const FormEmploye = () => {
       <Stack direction="column">
       <FormControl>
       <FormLabel id="demo-row-radio-buttons-group-label">Statut Matrimoniel</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="statut_matrimoniel"
-      >
-        <FormControlLabel value="marie" control={<Radio />} sx={{color:'secondary'}} color="secondary" label="Marié" />
-        <FormControlLabel value="celibataire" control={<Radio />} label="Célébataire" />
-      </RadioGroup>
+      <Stack direction="row" spacing={2}>
+      <input onChange={(e) => handle(e)} value="celibataire" type="radio" id="statut_matrimoniel" name="statut_matrimoniel"/>
+       <label for="celibataire">Celibataire</label>
+       <input onChange={(e) => handle(e)} value= "marie" type="radio" id="statut_matrimoniel" name="statut_matrimoniel"/>
+    <label for="dewey">Marie</label>
+      </Stack>
+      
+    
     </FormControl>
       </Stack>
     <Stack direction="column"  sx={{marginLeft:7}}>
@@ -329,17 +245,7 @@ const FormEmploye = () => {
           Nombre enfants
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-         onChange={(e) => handle(e)}
-         name="nombre_enfants"
-         id="nombre_enfants"
-        // label="nombre_enfants"
-         type="number"
-        //  autoComplete="nombre_enfants"
-        //  autoFocus
-        //  {...register('nombre_enfants', registerOptions.nombre_enfants) }
-        //  error={!!errors?.nombre_enfants}
-        //  helpertext={errors?.nombre_enfants ? errors.nombre_enfants.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="number" name="nombre_enfants" id="nombre_enfants"
         />  
          <small className="text-danger">
             {errors?.nombre_enfants && errors.nombre_enfants.message}
@@ -362,29 +268,9 @@ const FormEmploye = () => {
         </InputLabel>
         <FormControl sx={{ m: 1, width: 300 }}>
 
-        <Select
-        sx={{height:35}}
-          labelId="demo-multiple-name-label"
-          onChange={(e) => handle(e)} id="departement_id"
-          // onChange={handleChange}
-          defaultValue="" 
-          name="departement_id"
-          // value={personName}
-          // onChange={handleChange}
-         
-          // MenuProps={MenuProps}
-        >
-           {departement.length > 0 && departement.map((departements) => (
-            <MenuItem
-              key={departements.id}
-              value={departements.id}
-             
-            >
-              {departements.nom_departement}
-            </MenuItem>
-
-           ))}
-        </Select>
+        <select name="departement_id" onChange={(e) => handle(e)} id="departement_id"
+     > <option>--Please choose an option--</option> {departement.length > 0 && departement.map((departements) =>   <option value={departements.id}>{departements.nom_departement}</option> )}
+     </select>
       </FormControl>
         </Stack>
         <Stack direction="column" sx={{marginLeft:15}}>
@@ -393,29 +279,9 @@ const FormEmploye = () => {
         </InputLabel>
         <FormControl sx={{ m: 1, width: 300 }}>
 
-        <Select
-        sx={{height:35}}
- 
-          onChange={(e) => handle(e)}
-           id="fonction_id"
-          // onChange={handleChange}
-          defaultValue="" 
-          name="fonction_id"
-          
-          // MenuProps={MenuProps}
-        >
-           {fonction.length > 0 && fonction.map((fonctions) => (
-            <MenuItem
-              key={fonctions.id}
-              value={fonctions.id}
-             
-            >
-              {fonctions.nom_fonction}
-            </MenuItem>
-
-           ))}
-        </Select>
-
+        <select name="fonction_id" onChange={(e) => handle(e)} id="fonction_id"
+        > <option value="">--Please choose an option--</option> {fonction.map((fonctions) => (   <option value={fonctions.id}>{fonctions.nom_fonction}</option> ))}
+        </select>
   
       </FormControl>
         </Stack>
@@ -428,30 +294,9 @@ const FormEmploye = () => {
         </InputLabel>
         <FormControl sx={{ m: 1, width: 300 }}>
 
-        <Select
-        sx={{height:35}}
-      
-        onChange={(e) => handle(e)} 
-        id="type_contrat_id"
-        // onChange={handleChange}
-        defaultValue="" 
-        name="type_contrat_id"
-        // value={personName}
-        // onChange={handleChange}
-       
-        // MenuProps={MenuProps}
-      >
-         {typeContrat.length > 0 && typeContrat.map((typeContrats) => (
-          <MenuItem
-            key={typeContrats.id}
-            value={typeContrats.id}
-           
-          >
-            {typeContrats.nom}
-            </MenuItem>
-          ))} 
-        </Select>
-
+        <select name="type_contrat_id" onChange={(e) => handle(e)} id="type_contrat_id"
+         > <option value="">--Please choose an option--</option> {typeContrat.map((fonctions) => (   <option value={fonctions.id}>{fonctions.nom}</option> ))}
+         </select>
   
       </FormControl>
         </Stack>
@@ -522,9 +367,9 @@ const FormEmploye = () => {
          name="date_entree"
          id="date_entree"
          
-         autoComplete="date_entree"
-         type="date"
-         autoFocus
+        //  autoComplete="date_entree"
+        //  type="date"
+        //  autoFocus
         //  {...register('date_naissance', registerOptions.date_naissance) }
         //  error={!!errors?.date_naissance}
         //  helpertext={errors?.date_naissance ? errors.date_naissance.message : null}
@@ -545,9 +390,9 @@ const FormEmploye = () => {
          onChange={(e) => handle(e)}
          name="date_sortie"
          id="date_sortie"
-         autoComplete="date_sortie"
+        // autoComplete="date_sortie"
          type="date"
-         autoFocus
+         //autoFocus
         //  {...register('date_naissance', registerOptions.date_naissance) }
         //  error={!!errors?.date_naissance}
         //  helpertext={errors?.date_naissance ? errors.date_naissance.message : null}
@@ -567,9 +412,9 @@ const FormEmploye = () => {
          name="duree"
          id="duree"
          
-         autoComplete="duree"
+        //  autoComplete="duree"
         
-         autoFocus
+        //  autoFocus
         //  {...register('date_naissance', registerOptions.date_naissance) }
         //  error={!!errors?.date_naissance}
         //  helpertext={errors?.date_naissance ? errors.date_naissance.message : null}
@@ -588,58 +433,37 @@ const FormEmploye = () => {
         </Stack> */}
         </div>
         <Typography variant="body1" color="text.secondary" gutterBottom sx={{marginTop:5}}>
-         Contact en cas d'urgence
+         Contact en cas D'urgence
         </Typography>
         <Divider />
         <div className="divform">
         <Stack direction="row" sx={{marginTop:2}}>
         <Stack direction="column" sx={{marginLeft:1}}>
         <InputLabel shrink htmlFor="bootstrap-input">
-          nom_prenom_contact_urgence
+          Nom et Prenom
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-        
-         onChange={(e) => handle(e)}
-         name="nom_prenom_contact_urgence"
-         id="nom_prenom_contact_urgence"
-        //  label="salaire"
-        //  autoComplete="salaire"
-        //  autoFocus
-        //  {...register('prenom', registerOptions.prenom) }
-        
-        //  error={!!errors?.prenom}
-        //  helpertext={errors?.prenom ? errors.prenom.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="nom_prenom_contact_urgence" id="nom_prenom_contact_urgence"
         />  
          <small className="text-danger">
             {errors?.prenom && errors.prenom.message}
           </small>
       </FormControl>
         </Stack>
-        <Stack direction="column" sx={{marginLeft:20}}>
+        <Stack direction="column" sx={{marginLeft:25}} >
         <InputLabel shrink htmlFor="bootstrap-input">
-          telephone_contact_urgence
+          Telephone
         </InputLabel>
         <FormControl >
-        <OutlinedInput sx={{height:35}}
-        
-         onChange={(e) => handle(e)}
-         name="telephone_contact_urgence"
-         id="telephone_contact_urgence"
-        //  label="salaire"
-        //  autoComplete="salaire"
-        //  autoFocus
-        //  {...register('prenom', registerOptions.prenom) }
-        
-        //  error={!!errors?.prenom}
-        //  helpertext={errors?.prenom ? errors.prenom.message : null}
+        <input className="inputtaille" onChange={(e) => handle(e)} type="text" name="telephone_contact_urgence" id="telephone_contact_urgence"
         />  
          <small className="text-danger">
             {errors?.prenom && errors.prenom.message}
           </small>
       </FormControl>
         </Stack>
-        </Stack>
+         </Stack>
+        
         </div>
         <button>Submit</button>
       </Box>
